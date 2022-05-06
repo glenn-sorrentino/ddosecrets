@@ -327,6 +327,10 @@ header nav ul li:first-of-type {
   header h1 {
   }
 
+  header nav li input {
+    width: 100%;
+  }
+
   .logoMark {
     width: 2rem;
     height: 2rem;
