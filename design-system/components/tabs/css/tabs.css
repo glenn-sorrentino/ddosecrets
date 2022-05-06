@@ -1,0 +1,102 @@
+@media (prefers-color-scheme: light) {
+  .tabs {
+    background-color: white;
+    border-bottom: var(--border-dark);
+  }
+
+  .tabs a:hover {
+    background-color: var(--color-shade);
+  }
+
+  .tabContainerScrolled {
+    background-color: var(--color-light);
+  }
+
+  .tabs .badge {
+    background-color: #B6585C;
+    color: var(--color-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .tabs {
+    border-bottom: var(--border-light);
+    background-color: var(--color-shade-dm);
+  }
+
+  .tabs a:hover {
+    background-color: var(--color-dark-1);
+  }
+
+  .tabContainerScrolled {
+    background-color: var(--color-dark);
+  }
+}
+
+.secondaryContainer .tabs {
+  width: auto;
+  max-width: 1280px !important;
+}
+
+.tabs.wrapper {
+  width: auto;
+  z-index: 1;
+  max-width: inherit;
+}
+
+.tabs {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+header + div > .tabs {
+  position: fixed;
+  top: 78px;
+  right: 0;
+  left: 0;
+}
+
+.tabs ul a {
+  display: inline-block;
+  padding: var(--spacing-medium) var(--spacing-base);
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  cursor: pointer;
+  border-radius: 2px 2px 0 0;
+  height: auto;
+}
+
+.tabs a.selected {
+  font-weight: bold;
+}
+
+.tabContainerScrolled {
+  position: fixed;
+  top: 87px;
+  width: 100%;
+  z-index: 3;
+  padding-top: 0;
+}
+
+.tabs .badge {
+  display: initial;
+  margin-left: var(--spacing-xsmall) !important;
+  padding: calc(var(--spacing-xxsmall) * .65) calc(var(--spacing-small) * .65);
+  line-height: inherit;
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .tabContainerScrolled {
+    top: 70px;
+  }
+
+  .chatTabs {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+}
