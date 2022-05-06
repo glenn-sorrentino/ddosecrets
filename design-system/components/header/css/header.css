@@ -89,7 +89,7 @@ header .logo {
   padding: calc(var(--spacing-medium) * 1.125) 0;
   line-height: var(--line-height-body);
   display: flex;
-  width: fit-content;
+  width: 100%;
   font-weight: normal;
 }
 
@@ -114,7 +114,7 @@ header .wrapper {
 
 .btnIcon {
   position: absolute;
-  right: var(--spacing-base);
+  left: var(--spacing-base);
   transform: translateY(-50%);
   top: 50%;
 }
@@ -138,8 +138,11 @@ header .tabs ul a {
 .searchContainer {
   display: flex;
   align-items: center;
-  margin-left: var(--spacing-base);
-  margin-right: var(--spacing-xxlarge);
+  margin-right: var(--spacing-base);
+  position: absolute;
+  right: 0;
+  transform: translateY(-50%);
+  top: 50%;
 }
 
 header input {
@@ -222,7 +225,7 @@ header nav ul {
   flex-direction: column;
   position: absolute;
   top: 72px;
-  right: var(--spacing-small);
+  left: var(--spacing-small);
   bottom: 0;
   z-index: 1;
   padding: var(--spacing-small) 0;
@@ -266,6 +269,11 @@ header nav ul li:first-of-type {
   margin-bottom: var(--spacing-base);
 }
 
+@media only screen and (max-width: 1280px) {
+  header .logo {
+    width: fit-content;
+    margin-left: var(--spacing-xxlarge);
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -300,6 +308,11 @@ header nav ul li:first-of-type {
 
   header nav ul li:first-of-type {
     display: inherit;
+  }
+
+  header .logo {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
