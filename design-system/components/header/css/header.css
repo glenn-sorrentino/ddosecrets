@@ -15,6 +15,10 @@
     box-shadow: inset 0 -3px var(--color-dark);
   }
 
+  header nav ul li a:hover {
+    box-shadow: inset 3px 0 var(--color-light);
+  }
+
   nav ul.open {
     box-shadow: var(--shadow-lm);
     border: var(--border-dark);
@@ -36,6 +40,10 @@
 
   nav a.selected {
     box-shadow: inset 0 -3px var(--color-light);
+  }
+
+  header nav ul li a:hover {
+    box-shadow: inset 3px 0 var(--color-light);
   }
 
   nav ul.open {
@@ -101,7 +109,7 @@ header .wrapper {
 }
 
 .articleHeader .wrapper {
-  
+
 }
 
 .btnIcon {
@@ -252,8 +260,12 @@ header .open nav ul {
   background-color: var(--color-light);
 }
 
-header nav ul.open li a:hover {
-  box-shadow: inset 3px 0 var(--color-dark);
+header nav ul li:first-of-type {
+  display: none;
+  padding: 0 var(--spacing-small);
+  margin-bottom: var(--spacing-base);
+}
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -262,20 +274,12 @@ header nav ul.open li a:hover {
       box-shadow: var(--shadow-lm);
       background-color: var(--color-light);
     }
-
-    header nav ul li a:hover {
-      box-shadow: inset 3px 0 var(--color-dark);
-    }
   }
 
   @media (prefers-color-scheme: dark) {
     header nav ul {
       box-shadow: var(--shadow-dm);
       background-color: var(--color-shade-dm);
-    }
-
-    header nav ul li a:hover {
-      box-shadow: inset 3px 0 var(--color-light);
     }
   }
 
@@ -287,6 +291,16 @@ header nav ul.open li a:hover {
     margin-right: var(--spacing-base);
   }
 
+}
+
+@media only screen and (max-width: 640px) {
+  .searchContainer {
+    display: none;
+  }
+
+  header nav ul li:first-of-type {
+    display: inherit;
+  }
 }
 
 @media only screen and (max-width: 480px) {
